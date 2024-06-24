@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Maths Playground - Feedback</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/favicon.ico">
+</head>
+<body>
+    <!--Header-->
+    <header>
+        <div class="container">
+            <img src="images/maths-playground-logo.png" alt="Maths Playground Logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Learn</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <!--Main content-->
+        <div class="main-content">
+            <!--Feedback div - shown on page load-->
+            <div id="feedback-div">
+                <!--Page intro message-->
+                <h1 class="page-title">Feedback</h1>
+                <h3>(From parents and teachers)<br>
+                    Maths playground aims to provide a fun and effective learning experience for
+                    kids. Whether you are a parent or teacher, we value your thoughts on how we can 
+                    improve our website. Your feedback helps us to continuously improve your kids  
+                    learning experience. Your ideas and suggestions are invaluable.
+                    We would appreciate if you could take some time to fill out the form below:
+                </h3>
+
+                <!--Feedback form-->
+                <form id="feedback-form">
+                    <label class="input-label" for="name">First Name:</label>
+                    <input type="text" id="fname" placeholder="First Name..." required><br>
+    
+                    <label class="input-label" for="name">Surname:</label>
+                    <input type="text" id="sname" placeholder="Surname..." required><br>
+    
+                    <label class="input-label" for="email">Email:</label>
+                    <input type="email" id="email" placeholder="Email..." required><br>
+    
+                    <label class="input-label" for="relation">Relation:</label>
+                    <select id="relation" name="relation">
+                      <option value="parent">Parent</option>
+                      <option value="teacher">Teacher</option>
+                      <option value="other">Other</option>
+                    </select>
+    
+                    <p>On a scale of 1-10, how much do you agree with the following:</p>
+                    <div class="slider-question">
+                        <label class="slider-label" for="statement1">The website is user friendly for kids to naviagate: <span id="slider1Value">5</span></label>
+                        <input type="range" min="0" max="10" value="5" class="slider" id="slider1">
+                    </div>
+                    <div class="slider-question">
+                        <label class="slider-label" for="statement1">The maths content is engaging: <span id="slider2Value">5</span></label>
+                        <input type="range" min="0" max="10" value="5" class="slider" id="slider2">
+                    </div>
+                    <div class="slider-question">
+                        <label class="slider-label" for="statement1">The website has improve my child's maths skills: <span id="slider3Value">5</span></label>
+                        <input type="range" min="0" max="10" value="5" class="slider" id="slider3">
+                    </div>
+                    <div class="slider-question">
+                        <label class="slider-label" for="statement1">The design and layout is appealing to kids: <span id="slider4Value">5</span></label>
+                        <input type="range" min="0" max="10" value="5" class="slider" id="slider4">
+                    </div>
+    
+                    <label for="name">Comments:</label>
+                    <textarea type="text" id="comments"></textarea><br>
+    
+                    <input id="submit-feedback" type="submit" value="Submit">
+                </form>
+            </div>
+            <!--Feedback submitted div - shown once form submitted-->
+            <div id="feedback-submitted-div">
+                <h1>Thank you!</h1>
+                <h3>Thank you for taking the time to submit some feedback, it is greatly appreciated!</h3>
+            </div>
+        </div>
+    </main>
+
+    <!--Footer-->
+    <footer>
+        <div class="container">
+            <p>
+                Welcome to the Maths Playground! <br>
+                Learn about the following topics: counting, adding, odd and even, shapes and fracitions. <br>
+                Then test your knowledge using our fun interactive quizes!
+            </p>
+            <!--Links-->
+            <ul>
+                <p>Quick Links</p>
+                <li><a href="index.html">Learn</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li id="selected-page"><a href="quiz.html">Feedback</a></li>
+            </ul>
+        </div>
+        <div class="centre-content">
+            &copy; Maths | 2024
+        </div>
+    </footer>
+    
+    <!--Javascript-->
+    <script src="javascript/feedback.js"></script>
+
+</body>
+</html>

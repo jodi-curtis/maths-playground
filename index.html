@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Maths Playground - Learn</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/favicon.ico">
+</head>
+<body>
+  <!--Header-->
+  <header>
+    <div class="container">
+      <img src="images/maths-playground-logo.png" alt="Maths Playground Logo">
+      <nav>
+        <ul>
+            <li id="current-page"><a href="index.html">Learn</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+        </ul>
+    </nav>
+    </div>
+  </header>
+  <main>
+    <!--Main content-->
+    <div class="main-content">
+      <!--Page intro message-->
+      <h1 class="page-title">Learn</h1>
+      <h3>Welcome to the Learn section of Maths Playground. Use the interactive examples below to help you learn to count, add,  
+        odd and even, basic shapes and fractions. Once you have gone through all 5 topics, go to the Quiz page to test your knowledge. <br> <br>
+        You can use the buttons below to jump to the topic you wish to learn about.
+      </h3>
+
+      <!--Links to jump to section of page-->
+      <div class="jump-to-links">
+        <a href="#count-section">COUNT</a>
+        <a href="#add-section">ADD</a>
+        <a href="#odd-even-section">ODD OR EVEN</a>
+        <a href="#shapes-section">SHAPES</a>
+        <a href="#fractions-section">FRACTIONS</a>
+      </div>
+
+      <!--Count Section-->
+      <div class="section" id="count-section">
+        <h1>Count</h1>
+        <p>Learn to count to 20 using the below...</p>
+        <div class="centre-content">
+          <div class="buttons">
+            <!--Plus and minus buttons and counter-->
+            <button id="btn-count-sub">-</button>
+            <p id="count-counter">0</p>
+            <button id="btn-count-add">+</button>
+          </div>
+        </div>
+        <!--Container to show boxes-->
+        <div id="container-count">
+        </div>
+      </div>
+
+      <!--Add Section-->
+      <div class="section" id="add-section">
+        <h1>Add</h1>
+        <div class="centre-content">
+          <div class="buttons">
+            <!--Plus and minus buttons and counter for number 1-->
+            <button id="btn-add-sub1">-</button>
+            <p id="add-num1-counter">0</p>
+            <button id="btn-add-add1">+</button>
+          </div>
+        </div>
+        <!--Container to show boxes for number 1-->
+        <div id="container-add-num1">
+        </div>
+        <p class="centre-content" id="add-plus">+</p>
+        <div class="centre-content">
+          <div class="buttons">
+            <!--Plus and minus buttons and counter for number 1-->
+            <button id="btn-add-sub2">-</button>
+            <p id="add-num2-counter">0</p>
+            <button id="btn-add-add2">+</button>
+          </div>
+        </div>
+        <!--Container to show boxes for number 2-->
+        <div id="container-add-num2">
+        </div>
+        <p class="centre-content" id="add-sum">=</p>
+        <!--Will display total of sum-->
+        <p class="centre-content" id="add-total-counter">0</p>
+      </div>
+      
+      <!--Odd Even Section-->
+      <div class="section" id="odd-even-section">
+          <h1>Odd or Even</h1>
+          <p>Even numbers end in 0, 2, 4, 6 or 8. They are BLUE in the image below.<br>
+            Odd numbers end in 1, 3, 5, 7 or 9. They are PINK in the image below. </p>
+        <div class="centre-content">
+          <!--Image to teach odd and even numbers-->
+          <img id="odd-even-img" src="images/odd-even.jpg" alt="Odd and Even Image">
+        </div>
+      </div>
+    
+      <!--Shapes Section-->
+      <div class="section" id="shapes-section">
+        <h1>Shapes</h1>
+        <!--Canvas to show shapes-->
+        <div class="canvas-container">
+          <canvas id="canvas-shapes-learn" width="600" height="600"></canvas>
+        </div>
+        <div class="centre-content">
+          <div class="buttons">
+            <!--Buttons to show shape in canvas-->
+            <button class="btns-shapes" id="btn-square">Square</button>
+            <button class="btns-shapes" id="btn-circle">Circle</button>
+            <button class="btns-shapes" id="btn-triangle">Triangle</button>
+            <button class="btns-shapes" id="btn-rectangle">Rectangle</button>
+            <button class="btns-shapes" id="btn-oval">Oval</button>
+          </div>
+        </div>
+      </div>
+
+      <!--Fractions Section-->
+      <div class="section" id="fractions-section">
+        <h1>Fractions</h1>
+        <!--Canvas to show fractions-->
+        <div class="canvas-container">
+        <canvas id="canvas-fractions-learn" width="600" height="600"></canvas>
+        </div>
+        <div class="centre-content">
+          <div class="buttons">
+            <!--Buttons to show fraction in canvas-->
+            <button class="btns-fractions" id="btn-quarter">Quarter (1/4)</button>
+            <button class="btns-fractions" id="btn-half">Half (1/2)</button>
+            <button class="btns-fractions" id="btn-three-quarters">Three Quarters (3/4)</button>
+            <button class="btns-fractions" id="btn-full">Full (1)</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!--Footer-->
+  <footer>
+    <div class="container">
+      <p>
+        Welcome to the Maths Playground! <br>
+        Learn about the following topics: counting, adding, odd and even, shapes and fracitions. <br>
+        Then test your knowledge using our fun interactive quizes!
+      </p>
+      <!--Links-->
+      <ul>
+        <p>Quick Links</p>
+        <li id="selected-page"><a href="index.html">Learn</a></li>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+      </ul>
+    </div>
+    <div class="centre-content">
+      &copy; Maths | 2024
+    </div>
+  </footer>
+
+  <!--Javascript-->
+  <script src="javascript/drawShape.js"></script>
+  <script src="javascript/fractionsFunctions.js"></script>
+  <script src="javascript/learn.js"></script>
+</body>
+</html>

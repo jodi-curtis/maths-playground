@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Maths Playground - Results</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.ico">
+  </head>
+  <body>
+    <!--Header-->
+    <header>
+      <div class="container">
+        <img src="images/maths-playground-logo.png" alt="Maths Playground Logo">
+        <nav>
+          <ul>
+              <li><a href="index.html">Learn</a></li>
+              <li><a href="quiz.html">Quiz</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <!--Main content-->
+      <div class="main-content">
+        <!--Page intro message-->
+        <h1 id="results-title">Congratulations!</h1>
+        <h3 class="results-text">Congratulations, you have completed all of the quizzes!<br>
+        Lets see how you done...</h3>
+        <!--Will display total score-->
+        <h3 class="results-text" id="total-result"></h3>
+        <div class="centre-content">
+          <!--Will display pie chart visualising the total score-->
+          <div id="chart-div"></div>
+        </div>
+        <!--Table to show score for each quiz-->
+        <table>
+            <thead>
+              <th>Quiz</th>
+              <th>Topic</th>
+              <th>Score</th>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        <!--Below text will provide user with feedback on their best/worst scores-->
+        <h3 class="results-text" id="best-result"></h3>
+        <h3 class="results-text" id="worst-result"></h3>
+        <h3 class="results-text" id="same-result"></h3>
+        <!--Button to return to index page-->
+        <div class="centre-content">
+          <a id="back-to-learn" href="index.html">Return to learn page...</a>
+        </div>
+      </div>
+
+    </main>
+
+      <!--Footer-->
+    <footer>
+      <div class="container">
+        <p>
+          Welcome to the Maths Playground! <br>
+          Learn about the following topics: counting, adding, odd and even, shapes and fracitions. <br>
+          Then test your knowledge using our fun interactive quizes!
+        </p>
+        <!--Links-->
+        <ul>
+          <p>Quick Links</p>
+          <li><a href="index.html">Learn</a></li>
+          <li><a href="quiz.html">Quiz</a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+      </div>
+      <div class="centre-content">
+        &copy; Maths | 2024
+      </div>
+    </footer>
+
+    <!--Javascript-->
+    <!--Script for google charts-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="javascript/results.js"></script>
+    
+  </body>
+</html>

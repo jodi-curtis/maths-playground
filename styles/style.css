@@ -1,0 +1,1044 @@
+/*------------------------------------------GENERAL------------------------------------*/ 
+/*Used on all pages*/ 
+*{
+  margin: 0;
+}
+
+
+
+/*Body used on all pages*/
+body{
+  font-family: Verdana, Arial, sans-serif;
+  user-select: none; /*Prevent text being highlighted when clicking buttons etc */
+}
+
+
+
+/*Header Styles used on all pages*/
+header{
+  background-color: #9f81db;
+  color: #ffffff;
+  padding: 2% 0;
+  display: flex;
+  justify-content: center;
+}
+
+header .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+  margin: 0, auto;
+}
+
+header .container img{
+  height: 100px;
+}
+
+
+
+/* Navigation styles used on all pages */
+header nav ul {
+  display: flex;
+  list-style: none; 
+  margin: 0; 
+  padding: 0;
+}
+
+header nav ul li {
+  margin-left: 20px; 
+}
+
+header nav a {
+  color: #ffffff; 
+  text-decoration: none; 
+  font-size: 1.5em; 
+}
+
+header nav a:hover { 
+  color: #bdabe0; 
+}
+
+nav #current-page a{ 
+  font-weight: bold;
+  color: #ffffff; 
+}
+
+
+
+/*Main used on all pages*/
+main{
+  background-color: #d2f1ff;
+  color: #004052;
+  line-height: 1.6;
+}
+
+.main-content{
+  margin: 0 auto;
+  width: 85%;
+  padding: 3% 0;
+}
+
+
+/*Jump-to links used on multiple pages*/
+.jump-to-links{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 10px;
+  margin: 5em 0;
+}
+
+.jump-to-links a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background-color: #f3ab59;
+  border: solid #ff8800 2px;
+  color: #ffffff;
+  padding: 0.5em 1em;
+  flex: 1;
+  margin: 1em;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.jump-to-links a:hover {
+  background-color: #ff8800;
+}
+
+
+.jump-to-links a:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+/*Page titles used on multiple pages*/
+.page-title{
+  margin: 1em 0;
+}
+
+/*Section used on multiple pages*/
+.section{
+  margin-bottom: 5em;
+	border: 5px solid #ffffff;
+  padding: 2em;
+}
+
+
+
+/*Centre Content used on all pages*/
+.centre-content{
+  display: flex;
+  justify-content: center;
+}
+
+
+
+/*Canvas container on index and quiz page*/
+.canvas-container{
+  display: flex;
+  justify-content: center;
+}
+
+
+
+/*Text on Index and Quiz page*/
+#add-plus, #add-sum, #add-total-counter{
+  font-size: 3em;
+}
+
+/*Count and Add Blocks on Index and Quiz page*/
+.countItem {
+	border: 5px solid #ffffff;
+	display: inline-block;
+	margin: 20px;
+	height: 100px;
+	width: 100px;
+	background-color: #9f81db;
+}
+
+
+
+/*Footer*/
+footer{
+  background-color: #9f81db;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+}
+
+footer .container ul{
+  list-style: none;
+  margin: 3em;
+}
+
+footer .container ul p{
+  text-decoration: underline;
+}
+
+footer .container ul li{
+  list-style: none;
+  margin: 1.5em 0;
+  text-decoration: none;
+}
+
+footer .container ul li a {
+  text-decoration: none;
+  color: #bdabe0;
+}
+
+footer .container ul #selected-page a{
+  font-weight: bold;
+  color: #ffffff;
+}
+
+footer .centre-content{
+  margin: 2em 0;
+}
+
+footer .container ul li a:hover { 
+  color: #ffffff; 
+}
+
+
+
+/*-------------------------------------------------------LEARN PAGE---------------------------------------------------*/
+/* Count Counter */
+#container-count {
+	margin: 20px 0px;
+	padding: 10px;
+  height: auto;
+  font-size: 2em;
+}
+
+
+
+/*Highlight boxes*/
+.highlight {
+	background-color: #fdf48b;
+}
+
+
+
+/* All buttons on Learn Page*/
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+	margin: 1em;
+  font-size: 1.5em;
+}
+
+.buttons button {
+	margin: 0 10px;
+  background-color: #004052;
+  color: #ffffff;
+}
+
+.buttons button:disabled {
+  background-color: #ffffff;
+  color: #004052;
+  pointer-events: none;
+}
+
+.buttons button:active {
+  background-color: #ffffff;
+  color: #004052;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.buttons button.selected {
+  background-color: #ffffff;
+  color: #004052;
+  font-weight: bold;
+}
+
+/* All counters in Learn page */
+#count-counter, #add-num1-counter, #add-num2-counter {
+	margin: 0 1em;
+	padding: 10px 20px; 
+  font-size: 2em;
+}
+
+
+#odd-even-img{
+  width: 75%;
+  margin: 2em 0;
+}
+
+
+
+
+
+/*---------------------------------------------QUIZ PAGE-----------------------------------------------*/
+/*All quiz containers hidden to begin*/
+#count-quiz{
+  display: none;
+}
+
+#add-quiz{
+  display: none;
+}
+
+#odd-even-quiz{
+  display: none;
+}
+
+#container-shapes-quiz{
+	display: none;
+}
+
+#container-fractions-quiz{
+	display: none;
+}
+
+
+
+/*Start Button*/
+.btn-start{
+  background-color: #37975f;
+  color: #ecfff4;
+  font-size: 2em;
+  padding: 0.5em 1em;
+  border: 3px solid #ffffff;
+  border-radius: 10px; 
+  box-shadow: 0 5px 15px #00000033; 
+  margin-top: 1em;
+}
+
+.btn-start:hover {
+  background-color: #85c49e;
+}
+
+
+.btn-start:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+
+/*Question Tracker*/
+.question-tracker{
+  text-align: right;
+}
+
+
+
+/*Invalid text input error*/
+.error-message{
+  display: none;
+  text-align: right;
+  color: red;
+}
+
+.invalid-input{
+  border-color: red;
+}
+
+
+
+/*Answer forms*/
+.form-container{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.form-container form label{
+  font-size: 1.5em;
+}
+
+.form-container form input, form button{
+  padding: 12px 20px;
+  font-size: 1.5em;
+  margin: 0.5em;
+}
+  
+.form-container form button {
+  background-color: #004052;
+  color: #ffffff;
+}
+
+.form-container form button:disabled {
+  background-color: #ffffff;
+  color: #004052;
+  pointer-events: none;
+}
+
+.form-container form button:active {
+  background-color: #ffffff;
+  color: #004052;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+
+/*Individual question result message*/
+.result-message{
+  font-size: 3em;
+}
+
+.result-message.correct{
+  color: #37975f;
+}
+
+.result-message.incorrect{
+  color: #fd6666;
+}
+
+
+
+/*Final quiz result message*/
+.final-message{
+  display: none;
+  padding: 2em;
+  font-size: 4em;
+}
+
+
+
+/* Answer buttons for odd even and fractions quiz*/
+.answer-buttons{
+  font-size: 1.5em;
+  margin: 1em;
+}
+
+.answer-buttons button{
+  margin: 0 10px;
+  background-color: #004052;
+  color: #ffffff;
+}
+
+.answer-buttons button:disabled {
+  background-color: #ffffff;
+  color: #004052;
+  pointer-events: none;
+}
+
+.answer-buttons button:active {
+  background-color: #ffffff;
+  color: #004052;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.answer-buttons button.selected {
+  background-color: #ffffff;
+  color: #004052;
+  font-weight: bold;
+  border: 5px solid #004052;
+}
+
+.answer-buttons button.correct {
+  border: 5px solid #37975f;
+  color: #37975f;
+}
+
+.answer-buttons button.incorrect {
+  border: 5px solid #fd6666;
+  color: #fd6666;
+}
+
+
+
+/*Odd Even Random Number generator*/
+#generate-number-button{
+  background-color: #004052;
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 1em;
+}
+
+#generate-number-button:disabled {
+  background-color: #ffffff;
+  color: #004052;
+  pointer-events: none;
+}
+
+#generate-number-button:active {
+  background-color: #ffffff;
+  color: #004052;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.generate-number-container {
+  text-align: center;
+  margin: 1em;
+}
+
+#generate-number-odd-even {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+
+
+/*All Buttons*/
+button {
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+/*Shape draggable buttons container*/
+#shape-drag-buttons {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+	margin: 1em;
+}
+
+#shape-drag-buttons div {
+	margin: 0 10px;
+}
+
+
+/*Shape names*/ 
+.shape-name {
+  margin: 20px;
+  padding: 10px 25px;
+  border: 1px solid black;
+  display: inline-block;
+  cursor: grab;
+  font-size: 1.5em;
+}
+
+
+
+/*Shape names disabled*/
+.shapesDisabled {
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+
+
+/*Shape drop zone*/
+#shape-drop-zone {
+  width: auto;
+  height: auto;
+  padding: 30px 70px;
+  margin: 20px;
+  border: 1px dashed black;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+#shape-drop-zone.selected {
+  font-weight: bold;
+  border: 5px solid #004052;
+}
+
+#shape-drop-zone.correct {
+  border: 5px solid #37975f;
+  color: #37975f;
+}
+
+#shape-drop-zone.incorrect {
+  border: 5px solid #fd6666;
+  color: #fd6666;
+}
+
+
+
+/*Complete section*/
+#complete-section{
+  display: none;
+}
+
+#complete-section h1{
+  font-size: 4.5em;
+}
+
+#complete-section h2{
+  margin: 2em 0;
+}
+
+#go-to-results{
+  font-size: 1.5em;
+  width: 50%;
+  padding: 1em;
+  background-color: #004052;
+  color: #ffffff;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+#go-to-results:hover {
+  background-color: #ffffff;
+  color: #004052;
+}
+
+#go-to-results:active {
+  background-color: #ffffff;
+  color: #004052;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+
+
+
+/*-------------------------------------------------RESULTS PAGE-----------------------------------------------------------*/
+/*Title*/
+#results-title{
+  font-size: 3.5em;
+}
+
+
+
+/*Text*/
+.results-text{
+  margin: 2em 0;
+}
+
+
+
+/*Pie Chart*/
+#chart-div{
+  margin: 2em 0;
+}
+
+
+
+/*Table to display individual quiz scores*/
+table{
+  background-color: #ffffff;
+  border: solid 2px #000000;
+  width: 100%;
+  font-size: 1.5em;
+  margin: 2em 0;
+  margin: 2em 0;
+}
+
+table thead{
+  background-color: #004052;
+  color: #ffffff;
+}
+
+table td, table th{
+  border: solid 2px #000000;
+}
+
+.middle{
+  text-align: center;
+}
+
+
+
+/*Back to learn page Button*/
+#back-to-learn{
+  width: 100%;
+  margin: 3em 0;
+  font-size: 1.5em;
+  padding: 1em;
+  background-color: #004052;
+  color: #ffffff;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+}
+
+#back-to-learn:hover {
+  background-color: #ffffff;
+  color: #004052;
+}
+
+#back-to-learn:active {
+  background-color: #ffffff;
+  color: #004052;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+
+
+
+/*-------------------------------------------------FEEDBACK PAGE-----------------------------------------------------------*/
+#feedback-submitted-div{
+  display: none;
+  padding-bottom: 20em;
+}
+
+#feedback-form {
+  margin: 2em 0;
+  padding: 2em;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #0000001a;
+  display: block;
+  overflow: hidden;
+}
+
+#feedback-form .input-label {
+  font-weight: bold;
+  margin-bottom: 1em;
+  float: left;
+  display: block;
+  clear: left;
+  width: 200px;
+  text-align: right;
+  padding-right: 1em;
+}
+
+#feedback-form input, select{
+  width: 50%;
+  padding: 0.75em;
+  margin-bottom: 1em;
+  border-radius: 5px;
+  font-size: 1.25em;
+}
+
+#feedback-form textarea {
+  width: 100%;
+  height: 150px;
+  padding: 1em;
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+  font-size: 1.25em;
+  resize: none;
+  margin-bottom: 1em;
+}
+
+#feedback-form p{
+  font-size: 1.5em;
+  margin: 2em 0;
+}
+
+#feedback-form .slider-question{
+  margin-bottom: 1em;
+}
+
+#feedback-form .slider{
+  width: 95%;
+  margin-top: 5px;
+}
+
+#feedback-form #submit-feedback{
+  width: 100%;
+  margin: 3em 0;
+  font-size: 1.5em;
+  padding: 1em;
+  background-color: #004052;
+  color: #ffffff;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+}
+
+#feedback-form #submit-feedback:hover {
+  background-color: #ffffff;
+  color: #004052;
+}
+
+#feedback-form #submit-feedback:active {
+  background-color: #ffffff;
+  color: #004052;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+/*--------------------------------------------------Tablet Screen--------------------------------------*/
+@media (max-width: 1280px) {
+
+  /*Multiple pages*/
+  .countItem {
+    border: 3px solid rgb(255, 255, 255);
+    margin: 10px;
+    height: 70px;
+    width: 70px;
+  }
+
+  .buttons button {
+    margin: 10px;
+  }
+
+  /*Learn page*/
+  #canvas-shapes-learn{
+    width: 300px;
+    height: 300px;
+  }
+
+  #canvas-fractions-learn{
+    width: 300px;
+    height: 300px;
+  }
+
+
+  /*Quiz page*/
+  #canvas-shapes-quiz{
+    width: 300px;
+    height: 300px;
+  }
+
+  #canvas-fractions-quiz{
+    width: 300px;
+    height: 300px;
+  }
+
+  .shape-name {
+    margin: 5px;
+    padding: 5px 20px;
+    font-size: 1em;
+  }
+  #shape-drop-zone {
+    padding: 10px 30px;
+    font-size: 1em;
+  }
+
+  .answer-buttons button{
+    margin: 0.5em;
+  }
+
+  #complete-section h1{
+    font-size: 4em;
+  }
+
+  #complete-section h2{
+    font-size: 1.5em;
+    margin: 2em 0;
+  }
+
+  .result-message{
+    font-size: 2em;
+  }
+
+  .final-message{
+    font-size: 2em;
+    padding: 5px;
+  }
+
+  /*Feedback page*/
+  #feedback-form #submit-feedback{
+    font-size: 1.25em;
+  }
+
+  #feedback-form input, select{
+    padding: 0,5em;
+    font-size: 1.25em;
+  }
+
+  #feedback-form .slider-question{
+    font-size: 1.25em;
+  }
+
+}
+
+/*--------------------------------------------------Mobile Screen--------------------------------------*/
+@media (max-width: 750px) {
+
+  /*Multiple pages*/
+  header{
+    padding: 7% 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  header .container img{
+    height: 75px;
+  }
+
+  header nav ul li {
+    margin-left: 10px; 
+  }
+  
+  header nav a {
+    font-size: 1em; 
+  }
+  
+  
+  
+  footer .container{
+    flex-direction: column;
+    margin-top: 3em;
+  }
+  
+  footer .container ul{
+    margin-left: 0;
+  }
+
+
+  h1{
+    font-size: 1.5em;
+  }
+  h3{
+    font-size: 1em;
+  }
+
+
+  .jump-to-links {
+    justify-content: center;
+  }
+
+  .countItem {
+    border: 2px solid rgb(255, 255, 255);
+    margin: 5px;
+    height: 40px;
+    width: 40px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    margin: 1em;
+    font-size: 1em;
+  }
+  
+  .buttons button {
+    margin: 10px;
+  }
+
+
+  /*Learn page*/
+  #odd-even-img{
+    width: 100%;
+  }
+
+  #canvas-shapes-learn{
+    width: 250px;
+    height: 250px;
+  }
+
+  #canvas-fractions-learn{
+    width: 250px;
+    height: 250px;
+  }
+
+  /*Quiz Page*/
+  #complete-section h1{
+    font-size: 2em;
+  }
+  
+  #complete-section h2{
+    font-size: 1em;
+    margin: 2em 0;
+  }
+  
+  #go-to-results{
+    font-size: 1.25em;
+    width: 100%;
+    padding: 0.5em;
+  }
+
+  .form-container{
+    justify-content: center;
+  }
+  
+  
+  .form-container form label{
+    font-size: 1em;
+  }
+  
+  .form-container form input, form button{
+    font-size: 1em;
+  }
+
+  .answer-buttons{
+    font-size: 1em;
+    margin: 0.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .answer-buttons button{
+    margin: 0.5em;
+  }
+  
+  #canvas-shapes-quiz{
+    width: 250px;
+    height: 250px;
+  }
+  
+  #canvas-fractions-quiz{
+    width: 250px;
+    height: 250px;
+  }
+  
+  .shape-name {
+    margin: 5px;
+    padding: 5px 20px;
+    display: inline-block;
+    font-size: 1em;
+  }
+  #shape-drop-zone {
+    padding: 10px 30px;
+    font-size: 1em;
+  }
+  
+  #shape-drag-buttons {
+    flex-direction: column;
+  }
+  
+  #shape-drag-buttons div {
+    margin: 5px 0;
+  }
+  
+  .result-message{
+    font-size: 1.5em;
+  }
+  
+  .final-message{
+    font-size: 2em;
+    padding: 5px;
+  }
+
+
+
+  /*Feedback page*/
+  #feedback-form .input-label {
+    width: auto;
+  }
+
+  #feedback-form input, select{
+    width: 95%;
+    padding: 0.5em;
+    font-size: 1em;
+  }
+  
+  #feedback-form p{
+    font-size: 1em;
+    margin: 2em 0;
+  }
+
+  #feedback-form #submit-feedback{
+    font-size: 1.25em;
+    padding: 0.5em;
+  }
+
+  /*Results page*/
+  #results-title{
+    font-size: 2em;
+  }
+
+  #back-to-learn{
+    font-size: 1.25em;
+  }
+
+
+}

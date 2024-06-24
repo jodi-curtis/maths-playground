@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Maths Playground - Quiz</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/favicon.ico">
+</head>
+<body>
+    <!--Header-->
+    <header>
+        <div class="container">
+            <img src="images/maths-playground-logo.png" alt="Maths Playground Logo">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Learn</a></li>
+                    <li id="current-page"><a href="quiz.html">Quiz</a></li>
+                </ul>
+            </nav>
+        </div>
+      </header>
+    <main>
+        <!--Main content-->
+        <div class="main-content">
+            <!--Page intro message-->
+            <h1 class="page-title">Quizzes</h1>
+            <h3>Welcome to the Quiz section of Maths Playground. Here you can complete quizzes for each of the topics you learnt about in the Learn section. 
+                Once you have completed all 5 Quizzes, you will be able to see how you did overall and which topics you need to improve on.<br> <br>
+                You can use the buttons below to jump to the quiz you wish to complete.</h3>
+
+          <!--Links to jump to section of page-->
+            <div class="jump-to-links">
+                <a href="#count-section">COUNT</a>
+                <a href="#add-section">ADD</a>
+                <a href="#odd-even-section">ODD OR EVEN</a>
+                <a href="#shapes-section">SHAPES</a>
+                <a href="#fractions-section">FRACTIONS</a>
+            </div>
+
+            <!--Message appears when all quizzes are complete-->
+            <div class="section" id="complete-section">
+                <div class="centre-content">
+                    <h1>Congratulations!</h1>
+                </div>
+                <h2>Congratulations, you have completed all of the Maths Quizzes!<br>
+                    Click the button below to view a full break down of your results.
+                </h2>
+                <div class="centre-content">
+                    <!--Button to go to results page-->
+                    <button id="go-to-results">View Results</button>
+                </div>
+            </div>
+
+            <!--Count Quiz-->
+            <div class="section" id="count-section">
+                <h1>Count Quiz</h1>
+                <!--Quiz instructions and start button-->
+                <div id="count-intro">
+                    <h3>This quiz will test how well you can count to 20. <br><br>
+                        Instructions:
+                        <ul>
+                            <li>A random number of squares will appear on the screen</li>
+                            <li>Count the number of squares</li>
+                            <li>Type in your answer and click 'Submit'</li>
+                        </ul>
+                    </h3>
+                    <button class="btn-start" id="btn-count-start">Start</button>
+                </div>
+                <div id="count-quiz">
+                    <!--Question number tracker-->
+                    <h3 class="question-tracker" id="count-Q-tracker"></h3>
+                    <!--Div to show random number of boxes-->
+                    <div id="container-count-quiz">
+                    </div>
+                    <div class="centre-content">
+                        <!--Question result will show here-->
+                        <div class="result-message" id="count-result"></div>
+                    </div>
+                    <!--Error message-->
+                    <span id="input-error-count" class="error-message"></span>
+                    <!--Answer form-->
+                    <div class="form-container">
+                        <form id="form-count-quiz">
+                            <label for="input-count-answer">Enter your answer:</label>
+                            <input type="text" id="input-count-answer" name="answer">
+                            <button type="submit" id="btn-count-submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="centre-content">
+                    <!--Final score shown here once 5 questions are completed-->
+                    <div class="final-message" id="final-result-count"></div>
+                </div>
+            </div>
+
+            <!--Add Quiz-->
+            <div class="section" id="add-section">
+                <h1>Add Quiz</h1>
+                <!--Quiz instructions and start button-->
+                <div id="add-intro">
+                    <h3>This quiz will test how well you can add to 20. <br><br>
+                        Instructions:
+                        <ul>
+                            <li>2 groups of squares will appear on the screen</li>
+                            <li>Count how many squares are in each group</li>
+                            <li>Add the 2 numbers togther</li>
+                            <li>Type in your answer and click 'Submit'</li>
+                        </ul>
+                    </h3>
+                    <button class="btn-start" id="btn-add-start">Start</button>
+                </div>
+                <div id="add-quiz">
+                    <!--Question number tracker-->
+                    <h3 class="question-tracker" id="add-Q-tracker"></h3>
+                    <!--Div to show first random number of boxes-->
+                    <div id="container-addQuiz-num1">
+                    </div>
+                    <p class="centre-content" id="add-plus">+</p>
+                    <!--Div to show second random number of boxes-->
+                    <div id="container-addQuiz-num2">
+                    </div>
+                    <div class="centre-content">
+                        <p id="add-sum"></p>
+                    </div>
+                    <div class="centre-content">
+                        <!--Question result will show here-->
+                        <div class="result-message" id="result-add"></div>
+                    </div>
+                    <!--Error message-->
+                    <span id="input-error-add" class="error-message"></span>
+                    <!--Answer form-->
+                    <div class="form-container">
+                        <form id="form-add-quiz">
+                            <label for="add-answer-input">Enter your answer:</label>
+                            <input type="text" id="add-answer-input" name="answer">
+                            <button type="submit" id="btn-add-submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="centre-content">
+                    <!--Final score shown here once 5 questions are completed-->
+                    <div class="final-message" id="final-result-add"></div>
+                </div>
+            </div>
+          
+            <!--Odd Even Quiz-->
+            <div class="section" id="odd-even-section">
+                <h1>Odd or Even Quiz</h1>
+                <!--Quiz instructions and start button-->
+                <div id="odd-even-intro">
+                    <h3>This quiz will test if you can identify odd and even numbers. <br><br>
+                        Instructions:
+                        <ul>
+                            <li>Click 'Get Number'</li>
+                            <li>A random number will appear on the screen</li>
+                            <li>Click 'Odd' if the number is Odd and 'Even' if the number is Even</li>
+                        </ul>
+                    </h3>
+                    <button class="btn-start" id="btn-odd-even-start">Start</button>
+                </div>
+                <div id="odd-even-quiz">
+                    <!--Question number tracker-->
+                    <h3 class="question-tracker" id="odd-even-Q-tracker"></h3>
+                    <div class="generate-number-container">
+                        <!--Button to generate random number-->
+                        <button id="generate-number-button">Get Number</button>
+                        <div id="generate-number-odd-even">0</div>
+                    </div>
+                    <div class="centre-content">
+                        <!--Question result will show here-->
+                        <div class="result-message" id="result-odd-even"></div>
+                    </div>
+                    <div class="centre-content">
+                        <!--Answer buttons-->
+                        <div class="answer-buttons" id="btns-odd-even">
+                            <button id="btn-odd">ODD</button>
+                            <button id="btn-even">EVEN</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="centre-content">
+                    <!--Final score shown here once 5 questions are completed-->
+                    <div class="final-message" id="final-result-odd-even"></div>
+                </div>
+            </div>
+          
+            <!--Shapes Quiz-->
+            <div class="section" id="shapes-section">
+                <h1>Shapes Quiz</h1>
+                <!--Quiz instructions and start button-->
+                <div id="shapes-intro">
+                    <h3>This quiz will test if you can identify basic shapes. <br><br>
+                        Instructions:
+                        <ul>
+                            <li>Drag the name of the shape displayed on the screen and drop in the drop zone</li>
+                        </ul>
+                    </h3>
+                    <button class="btn-start" id="btn-shapes-start">Start</button>
+                </div>
+                <div id="container-shapes-quiz">
+                    <!--Question number tracker-->
+                    <h3 class="question-tracker" id="shapes-Q-tracker"></h3>
+                    <div class="canvas-container">
+                        <canvas id="canvas-shapes-quiz" width="450" height="450"></canvas>
+                    </div>
+                    <div class="centre-content">
+                        <!--Question result will show here-->
+                        <div class="result-message" id="result-shapes"></div>
+                    </div>
+                    <div class="centre-content">
+                        <!--Drop zone for answer-->
+                        <div id="shape-drop-zone">Drop answer here</div>
+                    </div>
+                    <div class="centre-content">
+                        <div id="shape-drag-buttons">
+                            <!--Draggable shape names-->
+                            <div class="shape-name" draggable="true" id="square">Square</div>
+                            <div class="shape-name" draggable="true" id="circle">Circle</div>
+                            <div class="shape-name" draggable="true" id="triangle">Triangle</div>
+                            <div class="shape-name" draggable="true" id="rectangle">Rectangle</div>
+                            <div class="shape-name" draggable="true" id="oval">Oval</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="centre-content">
+                    <!--Final score shown here once 5 questions are completed-->
+                    <div class="final-message" id="final-result-shapes"></div>
+                </div>
+            </div>
+          
+            <!--Fractions Quiz-->
+            <div class="section" id="fractions-section">
+                <h1>Fractions Quiz</h1>
+                <!--Quiz instructions and start button-->
+                <div id="fractions-intro">
+                    <h3>This quiz will test your knowledge of fractions. <br><br>
+                        Instructions:
+                        <ul>
+                            <li>Click the button which describes the fraction being shown on the screen</li>
+                        </ul>
+                    </h3>
+                    <button class="btn-start" id="btn-fractions-start">Start</button>
+                </div>
+                <div id="container-fractions-quiz">
+                    <!--Question number tracker-->
+                    <h3 class="question-tracker" id="fractions-Q-tracker"></h3>
+                    <div class="canvas-container">
+                        <canvas id="canvas-fractions-quiz" width="600" height="600"></canvas>
+                    </div>
+                    <div class="centre-content">
+                        <!--Question result will show here-->
+                        <div class="result-message" id="result-fractions"></div>
+                    </div>    
+                    <div class="centre-content">
+                        <!--Answer buttons-->
+                        <div class="answer-buttons">
+                            <button class="fraction-name" id="btn-quiz-quarter">Quarter 1/4</button>
+                            <button class="fraction-name" id="btn-quiz-half">Half 1/2</button>
+                            <button class="fraction-name" id="btn-quiz-three-quarters">Three Quarters 3/4</button>
+                            <button class="fraction-name" id="btn-quiz-full">Full 1</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="centre-content">
+                    <!--Final score shown here once 5 questions are completed-->
+                    <div class="final-message" id="final-result-fractions"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+      <!--Footer-->
+    <footer>
+        <div class="container">
+            <p>
+                Welcome to the Maths Playground! <br>
+                Learn about the following topics: counting, adding, odd and even, shapes and fracitions. <br>
+                Then test your knowledge using our fun interactive quizes!
+            </p>
+            <!--Links-->
+            <ul>
+                <p>Quick Links</p>
+                <li><a href="index.html">Learn</a></li>
+                <li id="selected-page"><a href="quiz.html">Quiz</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+        </div>
+        <div class="centre-content">
+        &copy; Maths | 2024
+        </div>
+    </footer>
+
+    <!--Javascript-->
+    <script src="javascript/quiz.js"></script>
+    <script src="javascript/fractionsFunctions.js"></script>
+    <script src="javascript/drawShape.js"></script>
+</body>
+</html>
